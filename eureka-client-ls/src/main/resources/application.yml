@@ -4,6 +4,21 @@ server:
 spring:
   application:
     name: service-hi
+# admin
+  boot:
+    admin:
+      client:
+        url: http://localhost:8769
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+# 带登录控制的 eureka
 eureka:
   client:
     service-url:

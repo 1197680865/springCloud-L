@@ -1,14 +1,46 @@
 spring:
   application:
     name: admin-server
+#    admin 集成 Spring Security  步骤一
+  security:
+    user:
+      name: "zhangchen_admin"
+      password: "zhangchen_admin"
+#邮件提醒
+  mail:
+    host: smtp.163.com
+    username: 13691189699@163.com
+    password: BEDYGOSOAHUEZTFK
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  boot:
+    admin:
+      notify:
+        mail:
+          to: zhangchen@sutpc.com
+          from: 13691189699@163.com
 server:
   port: 8769
+
 eureka:
   client:
     service-url:
       defaultZone: http://zhangchen:zhangchen@localhost:8761/eureka/
     healthcheck:
       enabled: true
+#    admin 集成 Spring Security 步骤二 增加metadata-map
+  instance:
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
+# admin 集成 Spring Security 步骤三
+# 新增config   WebSecurityConfigurerAdapter
+
 # management:?
 management:
   endpoints:
@@ -18,3 +50,4 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+
