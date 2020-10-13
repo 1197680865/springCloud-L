@@ -23,7 +23,7 @@
         <java.version>1.8</java.version>
         <!--springcloud 需要与springboot的版本匹配  https://www.cnblogs.com/nhdlb/p/12557031.html-->
         <spring-cloud.version>Finchley.SR4</spring-cloud.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <lombok.version>1.16.18</lombok.version>
         <log4j.version>2.9.1</log4j.version>
         <!--admin 需要与 springboot的版本匹配  https://www.cnblogs.com/nhdlb/p/12557031.html-->
