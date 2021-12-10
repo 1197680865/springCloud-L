@@ -25,7 +25,7 @@
         <spring-cloud.version>Finchley.SR4</spring-cloud.version>
         <junit.version>4.12</junit.version>
         <lombok.version>1.16.18</lombok.version>
-        <log4j.version>2.9.1</log4j.version>
+        <log4j.version>2.15.0</log4j.version>
         <!--admin 需要与 springboot的版本匹配  https://www.cnblogs.com/nhdlb/p/12557031.html-->
         <spring-boot-admin.version>2.0.6</spring-boot-admin.version>
         <nacos.version>0.2.2.RELEASE</nacos.version>
